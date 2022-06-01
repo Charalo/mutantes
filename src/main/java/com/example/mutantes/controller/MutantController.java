@@ -43,4 +43,9 @@ public class MutantController {
     public ResponseEntity<Stats> stats(){
         return ResponseEntity.ok(mutantService.stats());
     }
+
+    @GetMapping({"health"})
+    public ResponseEntity health(){
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }
